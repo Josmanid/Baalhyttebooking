@@ -33,6 +33,13 @@ namespace Baalhyttebooking
             }
 
         }
+        public void PrintReservation() {
+            foreach (Reservation reservationer in _reservations.Values)
+            {
+                Console.WriteLine(reservationer);
+            }
+
+        }
 
         #endregion
 
