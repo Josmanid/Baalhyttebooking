@@ -22,8 +22,9 @@
             Console.WriteLine("Opgave 6:");
             Console.WriteLine();
             Reservationer reslist = new Reservationer();
-
-            Console.WriteLine("Register reservationer og display dem:");
+            Console.WriteLine("Vores resliste med dens unikke id er lavet " + reslist.ID);
+            Console.WriteLine();
+            Console.WriteLine("Register reservationer og display dem:" + reslist.ID);
             reslist.RegistrerReservation(reservation1);
             reslist.RegistrerReservation(reservation2);
             reslist.RegistrerReservation(reservation3);
@@ -34,8 +35,8 @@
             reslist.FjernReservation(reservation1);
             reslist.PrintReservation();
 
-
-
+            //Opgave 7: Valideringsfunktioner
+            Console.WriteLine("Opgave 7:");
 
 
 

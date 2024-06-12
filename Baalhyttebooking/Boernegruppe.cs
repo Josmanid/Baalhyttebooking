@@ -9,7 +9,7 @@ namespace Baalhyttebooking
 {
     internal class Boernegruppe
     {
-        private string _ageGroup;
+        public string _ageGroup;
 
         public string ID { get; private set; }
         public string Name { get; private set; }

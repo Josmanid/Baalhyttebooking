@@ -11,7 +11,7 @@ namespace Baalhyttebooking
     {
         public int ID { get; private set; }
         Dictionary<int, Reservation> _reservations;
-
+        
 
 
         public Reservationer()
@@ -21,7 +21,7 @@ namespace Baalhyttebooking
         ID = DateTime.Now.Year;
         }
 
-        #region CRUD
+        #region CRUD opgave6
 
         public void RegistrerReservation(Reservation reservation) {
             // Lavet for validering, så folk ikke bare kan trygge 5 milioner tilmeldte :)
@@ -54,7 +54,33 @@ namespace Baalhyttebooking
 
 
         #endregion
+        #region opgave7
+        public int AntalReservationer(Boernegruppe bGruppe) {
+            int result = 0;
+            foreach (Reservation res in  _reservations.Values)
+            {
+                if (res.Boernegruppe.ID == bGruppe.ID)
+                {
+                    result++;
+                }
+            }
+            return result;
+        }
 
+        public bool ReservationLedig(Reservation reservation) {
+            
+            foreach (Reservation res in _reservations.Values)
+            {
+                if (res.DateTime == reservation.DateTime)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        #endregion
 
     }
 }
