@@ -29,8 +29,10 @@
             reslist.RegistrerReservation(reservation3);
             reslist.RegistrerReservation(reservation4);
             reslist.PrintReservation();
-
-
+            Console.WriteLine();
+            Console.WriteLine("Fjern reservation 1 og derefter display den nye liste");
+            reslist.FjernReservation(reservation1);
+            reslist.PrintReservation();
 
 
 
