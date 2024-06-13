@@ -79,6 +79,11 @@ namespace Baalhyttebooking
             return true;
         }
 
+        public bool ReservationsTidspunktOK(Reservation reservation) {
+
+
+        }
+
 
         #endregion
 

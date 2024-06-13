@@ -36,8 +36,20 @@
             reslist.PrintReservation();
 
             //Opgave 7: Valideringsfunktioner
+           
             Console.WriteLine("Opgave 7:");
+            Console.WriteLine();
+            Console.WriteLine("Tester AntalReservationer");
+            Console.WriteLine($"Antal reservationer for {grp1.Name} : {reslist.AntalReservationer(grp2)}");
+            Console.WriteLine($"Antal reservationer for {grp2.Name} : {reslist.AntalReservationer(grp2)}");
+            Console.WriteLine();
 
+            Console.WriteLine("Tester ReservationLedig");
+            Console.WriteLine($"Reservation #{reservation1.ID} ledig: {reslist.ReservationLedig(reservation1)}");
+            reslist.FjernReservation(reservation3);
+            Console.WriteLine($"Reservation #{reservation3.ID} ledig: {reslist.ReservationLedig(reservation3)}");
+            reslist.RegistrerReservation(reservation3);
+            Console.WriteLine();
 
 
 
